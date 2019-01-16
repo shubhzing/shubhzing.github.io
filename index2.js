@@ -108,7 +108,6 @@ var latitude;
 var longitude;
 var x = document.getElementById("getLocation");
 function locationFunction(){
-alert("here")
  if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
   } else { 
