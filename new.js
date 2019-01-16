@@ -60,7 +60,7 @@ htmlText += '</div>';
 }
 $(document).ready(function() {
   $(".panel-body").click(function() {
-    var test = $(this).find(".list-group-item.list_sub_cate").text();
+    var test = $(this).find(".list-group-item list_sub_cate").text();
     console.log(test);
   });
 });
