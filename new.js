@@ -59,8 +59,8 @@ htmlText += '</div>';
     xhr.send();
 }
 $(document).ready(function() {
-  $(".panel-body").click(function() {
-    var test = $(this).find(".list-group-item list_sub_cate").text();
+  $(".panel-heading").click(function() {
+    var test = $(this).find(".search-keyword").text();
    alert(test);
   });
 });
