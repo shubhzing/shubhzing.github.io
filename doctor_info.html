@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.dismissButton{background-color:#fff;border:1px solid #dadce0;color:#1a73e8;border-radius:4px;font-family:Roboto,sans-serif;font-size:14px;height:36px;cursor:pointer;padding:0 24px}.dismissButton:hover{background-color:rgba(66,133,244,0.04);border:1px solid #d2e3fc}.dismissButton:focus{background-color:rgba(66,133,244,0.12);border:1px solid #d2e3fc;outline:0}.dismissButton:hover:focus{background-color:rgba(66,133,244,0.16);border:1px solid #d2e2fd}.dismissButton:active{background-color:rgba(66,133,244,0.16);border:1px solid #d2e2fd;box-shadow:0 1px 2px 0 rgba(60,64,67,0.3),0 1px 3px 1px rgba(60,64,67,0.15)}.dismissButton:disabled{background-color:#fff;border:1px solid #f1f3f4;color:#3c4043}
+</style><style type="text/css">.gm-style .gm-style-mtc label,.gm-style .gm-style-mtc div{font-weight:400}
+</style><style type="text/css">.gm-control-active>img{box-sizing:content-box;display:none;left:50%;pointer-events:none;position:absolute;top:50%;transform:translate(-50%,-50%)}.gm-control-active>img:nth-child(1){display:block}.gm-control-active:hover>img:nth-child(1),.gm-control-active:active>img:nth-child(1){display:none}.gm-control-active:hover>img:nth-child(2),.gm-control-active:active>img:nth-child(3){display:block}
+</style><link type="text/css" rel="stylesheet" href="./css"><style type="text/css">.gm-ui-hover-effect{opacity:.6}.gm-ui-hover-effect:hover{opacity:1}
+</style><style type="text/css">.gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px;box-sizing:border-box}
+</style><style type="text/css">@media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}</style><style type="text/css">.gm-style-pbc{transition:opacity ease-in-out;background-color:rgba(0,0,0,0.45);text-align:center}.gm-style-pbt{font-size:22px;color:white;font-family:Roboto,Arial,sans-serif;position:relative;margin:0;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
+</style>
+<title>Doctor Profile</title>
+<link rel="icon" type="image/ico" href="./favicon.png">
+	
+	<link href="./bootstrap.min.css" rel="stylesheet">
+	<link href="./toastr.css" rel="stylesheet">
+	<link href="./bootstrap-material-datetimepicker.css" rel="stylesheet">
+	
+	<link href="./owl.carousel.min.css" rel="stylesheet">
+	<link href="./style.css" rel="stylesheet">
+<style>
+    /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #description {
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+      }
+
+      #infowindow-content .title {
+        font-weight: bold;
+      }
+
+      #infowindow-content {
+        display: none;
+      }
+
+      #map #infowindow-content {
+        display: inline;
+      }
+
+      .pac-card {
+        margin: 10px 10px 0 0;
+        border-radius: 2px 0 0 2px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        outline: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        background-color: #fff;
+        font-family: Roboto;
+      }
+
+      #pac-container {
+        padding-bottom: 12px;
+        margin-right: 12px;
+      }
+
+      .pac-controls {
+        display: inline-block;
+        padding: 5px 11px;
+      }
+
+      .pac-controls label {
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 300;
+      }
+
+      #pac-input {
+        background-color: #fff;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        margin-left: 12px;
+        padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+        width: 400px;
+      }
+
+      #pac-input:focus {
+        border-color: #4d90fe;
+      }
+
+      #title {
+        color: #fff;
+        background-color: #4d90fe;
+        font-size: 25px;
+        font-weight: 500;
+        padding: 6px 12px;
+      }
+      #target {
+        width: 345px;
+      }
+</style>
+<style type="text/css">.gm-style {
+        font: 400 11px Roboto, Arial, sans-serif;
+        text-decoration: none;
+      }
+      .gm-style img { max-width: none; }</style><script type="text/javascript" charset="UTF-8" src="./onion.js.download"></script><script type="text/javascript" charset="UTF-8" src="./controls.js.download"></script></head>
+<body style="height: 674px;" class="dd_site_loaded">
+<div class="dd_loading_wrapper" style="display: none;">
+    <div class="dd_loading_inner">
+        <img src="./loader01.gif" alt="">
+    </div>
+</div>
+
+<div class="dd_sidebar_close"></div>
+
+<div class="dd_header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="dd_logo">
+				
+                    <a href="#"><img src="./logo.png" alt=""></a>
+                </div>
+                <div class="dd_nav">
+                    <ul>
+                      
+                        <li><a href="./index2.html" class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Doctors</font></font></a></li>
+
+                        <li><a href="./hospitals.html" class=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hospitals</font></font></a></li>
+						
+                        <li><a href="#" class=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Appointment</font></font></a></li>
+						
+                        <li><a href="#" class=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Prefer</font></font></a></li>
+						
+												<li><a href="#" class=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">pricing</font></font></a></li>						
+                    </ul>
+                </div>
+               <div class="dd_header_right">
+				 					 <div class="dd_profile_dd">
+                        <label><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Login / Register</font></font></a></label>
+                    </div>
+				  
+                  <div class="dd_nav_toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                  </div>				 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
+<div class="dd_main_wrapper"><div class="dd_single_detail">
+	<div class="container">
+		<div class="single_image">
+			<img src="./9b31fc0637.jpg" alt="AA salah eldin ahmed">
+		</div>
+		<div class="single_detail">
+			<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sagar</font></font></h3>
+			<span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Heart </font></font></span>
+			<ul>
+			<li><span><img src="./address_single.svg" alt=""></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jaipur</font></font></li>
+				
+			</ul>
+			<div class="clearfix"></div>
+			<h4><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">fees - 100000</font></font></h4>
+			<div class="btn_wrapper">
+				<a class="dd_btn dd_btn_small dd_btn_white dd_btn_icon " onclick="add_favourite(291 , this)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Add to favorites					</font></font><span class="icon">
+						<svg width="23px" height="22px"><path fill-rule="evenodd" stroke-width="1px" stroke="rgb(14, 213, 227)" fill="rgb(0, 0, 0)" d="M19.476,7.971 C19.242,5.379 17.422,3.498 15.144,3.498 C13.627,3.498 12.237,4.321 11.455,5.641 C10.680,4.304 9.348,3.497 7.855,3.497 C5.577,3.497 3.757,5.378 3.523,7.971 C3.505,8.086 3.429,8.688 3.659,9.671 C3.991,11.089 4.758,12.379 5.875,13.400 L11.452,18.502 L17.124,13.400 C18.241,12.379 19.008,11.089 19.340,9.671 C19.570,8.689 19.494,8.086 19.476,7.971 ZM18.740,9.529 C18.437,10.824 17.735,12.004 16.712,12.938 L11.455,17.667 L6.289,12.940 C5.264,12.003 4.562,10.824 4.259,9.529 C4.041,8.599 4.130,8.073 4.131,8.070 L4.135,8.038 C4.335,5.767 5.899,4.118 7.855,4.118 C9.297,4.118 10.568,5.012 11.170,6.450 L11.454,7.128 L11.737,6.450 C12.330,5.034 13.668,4.118 15.144,4.118 C17.099,4.118 18.664,5.767 18.868,8.068 C18.869,8.073 18.958,8.599 18.740,9.529 Z"></path></svg>
+					</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="dd_basic_wrapper">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7">
+				<div class="dd_basic_detail">
+					<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Basic information</font></font></h3>
+					<p><label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Specializing in: </font></font></label> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Allergist or Immunologist, Anesthesiologist, Cardiologist, Dermatologist, Gastroenterologist, Hematologist / Oncologist, Internal Medicine Physician, Nephrologist, Neurologist, Neurosurgeon, Obstetrician, Gynecologist, Nurse-Midwifery, Occupational Medicine Physician, Ophthalmologist, Oral and Maxillofacial Surgeon, Orthopedic Surgeon , Pulmonary Medicine Physician, Pulmonary Medicine Physician, Radiation Onconlogist, Diagnostic Radiologist, Rheumatologist, Urologist, Lung, DNA Test, Pediatrician, Pulmonary Medicine Physician, Pediatrician</font></font></span></p> 
+					
+					<p><label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Experience: </font></font></label> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">12 Years</font></font></span></p>
+					
+					<p><label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Qualification: </font></font></label> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5</font></font></span></p>
+					
+					<p><label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Contact number: </font></font></label> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0999709600</font></font></span></p>
+
+					<p><label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">e-mail address: </font></font></label> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ehalfa8@gmail.com</font></font></span></p>
+					<p><label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Area of ​​intrest: </font></font></label> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">kht 567</font></font></span></p><p><label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Insurance: </font></font></label> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">all</font></font></span></p><p><label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Price: </font></font></label> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">67</font></font></span></p><p><label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PAIR TEST: </font></font></label> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LOL</font></font></span></p><p><label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Age: </font></font></label> <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">88</font></font></span></p>					<div class="clearfix"></div><br><br>
+					<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">The description</font></font></h3>
+					<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">test for world</font></font></p>
+				</div>
+<div class="dd_reviews">
+					<div class="total_review">
+						<label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">view</font></font></label>
+						<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4</font></font></h3>
+						<div class="star_list">
+							<a class="active"><svg width="21px" height="20px"><path fill-rule="evenodd" fill="rgb(232, 232, 232)" d="M10.996,0.329 L13.668,6.643 L20.506,7.230 C20.981,7.271 21.174,7.862 20.814,8.173 L15.626,12.661 L17.181,19.338 C17.289,19.802 16.785,20.167 16.378,19.920 L10.500,16.381 L4.623,19.920 C4.215,20.166 3.712,19.801 3.820,19.338 L5.375,12.661 L0.186,8.172 C-0.174,7.860 0.018,7.270 0.493,7.229 L7.332,6.642 L10.004,0.329 C10.189,-0.110 10.811,-0.110 10.996,0.329 Z"></path></svg></a>
+							<a class="active"><svg width="21px" height="20px"><path fill-rule="evenodd" fill="rgb(232, 232, 232)" d="M10.996,0.329 L13.668,6.643 L20.506,7.230 C20.981,7.271 21.174,7.862 20.814,8.173 L15.626,12.661 L17.181,19.338 C17.289,19.802 16.785,20.167 16.378,19.920 L10.500,16.381 L4.623,19.920 C4.215,20.166 3.712,19.801 3.820,19.338 L5.375,12.661 L0.186,8.172 C-0.174,7.860 0.018,7.270 0.493,7.229 L7.332,6.642 L10.004,0.329 C10.189,-0.110 10.811,-0.110 10.996,0.329 Z"></path></svg></a>
+							<a class="active"><svg width="21px" height="20px"><path fill-rule="evenodd" fill="rgb(232, 232, 232)" d="M10.996,0.329 L13.668,6.643 L20.506,7.230 C20.981,7.271 21.174,7.862 20.814,8.173 L15.626,12.661 L17.181,19.338 C17.289,19.802 16.785,20.167 16.378,19.920 L10.500,16.381 L4.623,19.920 C4.215,20.166 3.712,19.801 3.820,19.338 L5.375,12.661 L0.186,8.172 C-0.174,7.860 0.018,7.270 0.493,7.229 L7.332,6.642 L10.004,0.329 C10.189,-0.110 10.811,-0.110 10.996,0.329 Z"></path></svg></a>
+							<a class="active"><svg width="21px" height="20px"><path fill-rule="evenodd" fill="rgb(232, 232, 232)" d="M10.996,0.329 L13.668,6.643 L20.506,7.230 C20.981,7.271 21.174,7.862 20.814,8.173 L15.626,12.661 L17.181,19.338 C17.289,19.802 16.785,20.167 16.378,19.920 L10.500,16.381 L4.623,19.920 C4.215,20.166 3.712,19.801 3.820,19.338 L5.375,12.661 L0.186,8.172 C-0.174,7.860 0.018,7.270 0.493,7.229 L7.332,6.642 L10.004,0.329 C10.189,-0.110 10.811,-0.110 10.996,0.329 Z"></path></svg></a>
+							<a class=""><svg width="21px" height="20px"><path fill-rule="evenodd" fill="rgb(232, 232, 232)" d="M10.996,0.329 L13.668,6.643 L20.506,7.230 C20.981,7.271 21.174,7.862 20.814,8.173 L15.626,12.661 L17.181,19.338 C17.289,19.802 16.785,20.167 16.378,19.920 L10.500,16.381 L4.623,19.920 C4.215,20.166 3.712,19.801 3.820,19.338 L5.375,12.661 L0.186,8.172 C-0.174,7.860 0.018,7.270 0.493,7.229 L7.332,6.642 L10.004,0.329 C10.189,-0.110 10.811,-0.110 10.996,0.329 Z"></path></svg></a>
+						</div>
+						<span class="total_count"><svg width="15px" height="20px"><path fill-rule="evenodd" fill="rgb(72, 72, 72)" d="M14.999,17.377 C14.999,17.064 15.001,17.332 14.999,17.377 ZM7.500,20.000 C1.105,20.000 0.001,17.743 0.001,17.743 C0.001,17.481 0.001,17.330 0.000,17.249 C0.002,17.292 0.005,17.272 0.012,16.898 C0.096,12.317 0.739,10.996 5.325,10.156 C5.325,10.156 5.978,11.000 7.500,11.000 C9.021,11.000 9.674,10.156 9.674,10.156 C14.311,11.005 14.917,12.346 14.990,17.051 C14.995,17.352 14.997,17.404 14.999,17.377 C14.999,17.457 14.998,17.574 14.998,17.743 C14.998,17.743 13.894,20.000 7.500,20.000 ZM0.000,17.249 C-0.001,17.202 -0.000,17.084 0.000,17.249 ZM7.500,9.781 C5.307,9.781 3.529,7.592 3.529,4.890 C3.529,2.190 4.113,-0.000 7.500,-0.000 C10.886,-0.000 11.470,2.190 11.470,4.890 C11.470,7.592 9.692,9.781 7.500,9.781 Z"></path></svg><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 3</font></font></span>
+					</div>
+<div class="review_bar">
+						<ul>
+							<li>
+								<div class="icon">
+									<svg width="21px" height="20px"><path fill-rule="evenodd" fill="rgb(201, 190, 39)" d="M10.996,0.329 L13.668,6.643 L20.506,7.230 C20.981,7.270 21.174,7.862 20.814,8.173 L15.626,12.661 L17.181,19.338 C17.289,19.802 16.785,20.167 16.378,19.920 L10.500,16.381 L4.623,19.920 C4.215,20.166 3.712,19.801 3.820,19.338 L5.375,12.661 L0.186,8.172 C-0.174,7.860 0.018,7.269 0.493,7.228 L7.332,6.642 L10.003,0.329 C10.189,-0.110 10.811,-0.110 10.996,0.329 Z"></path></svg>
+								</div>
+								<div class="star_count"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5</font></font></div>
+								<div class="progress_count">
+									<span style="width: 33.333333333333%;"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 1								</font></font></div>
+							</li>
+							<li>
+								<div class="icon">
+									<svg width="21px" height="20px"><path fill-rule="evenodd" fill="rgb(201, 190, 39)" d="M10.996,0.329 L13.668,6.643 L20.506,7.230 C20.981,7.270 21.174,7.862 20.814,8.173 L15.626,12.661 L17.181,19.338 C17.289,19.802 16.785,20.167 16.378,19.920 L10.500,16.381 L4.623,19.920 C4.215,20.166 3.712,19.801 3.820,19.338 L5.375,12.661 L0.186,8.172 C-0.174,7.860 0.018,7.269 0.493,7.228 L7.332,6.642 L10.003,0.329 C10.189,-0.110 10.811,-0.110 10.996,0.329 Z"></path></svg>
+								</div>
+								<div class="star_count"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4</font></font></div>
+								<div class="progress_count">
+									<span style="width: 33.333333333333%;"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 1								</font></font></div>
+							</li>
+							<li>
+								<div class="icon">
+									<svg width="21px" height="20px"><path fill-rule="evenodd" fill="rgb(201, 190, 39)" d="M10.996,0.329 L13.668,6.643 L20.506,7.230 C20.981,7.270 21.174,7.862 20.814,8.173 L15.626,12.661 L17.181,19.338 C17.289,19.802 16.785,20.167 16.378,19.920 L10.500,16.381 L4.623,19.920 C4.215,20.166 3.712,19.801 3.820,19.338 L5.375,12.661 L0.186,8.172 C-0.174,7.860 0.018,7.269 0.493,7.228 L7.332,6.642 L10.003,0.329 C10.189,-0.110 10.811,-0.110 10.996,0.329 Z"></path></svg>
+								</div>
+								<div class="star_count"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font></div>
+								<div class="progress_count">
+									<span style="width: 33.333333333333%;"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 1								</font></font></div>
+							</li>
+							<li>
+								<div class="icon">
+									<svg width="21px" height="20px"><path fill-rule="evenodd" fill="rgb(201, 190, 39)" d="M10.996,0.329 L13.668,6.643 L20.506,7.230 C20.981,7.270 21.174,7.862 20.814,8.173 L15.626,12.661 L17.181,19.338 C17.289,19.802 16.785,20.167 16.378,19.920 L10.500,16.381 L4.623,19.920 C4.215,20.166 3.712,19.801 3.820,19.338 L5.375,12.661 L0.186,8.172 C-0.174,7.860 0.018,7.269 0.493,7.228 L7.332,6.642 L10.003,0.329 C10.189,-0.110 10.811,-0.110 10.996,0.329 Z"></path></svg>
+								</div>
+								<div class="star_count"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></div>
+								<div class="progress_count">
+									<span style="width: 0%;"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 0								</font></font></div>
+							</li>
+							<li>
+								<div class="icon">
+									<svg width="21px" height="20px"><path fill-rule="evenodd" fill="rgb(201, 190, 39)" d="M10.996,0.329 L13.668,6.643 L20.506,7.230 C20.981,7.270 21.174,7.862 20.814,8.173 L15.626,12.661 L17.181,19.338 C17.289,19.802 16.785,20.167 16.378,19.920 L10.500,16.381 L4.623,19.920 C4.215,20.166 3.712,19.801 3.820,19.338 L5.375,12.661 L0.186,8.172 C-0.174,7.860 0.018,7.269 0.493,7.228 L7.332,6.642 L10.003,0.329 C10.189,-0.110 10.811,-0.110 10.996,0.329 Z"></path></svg>
+								</div>
+								<div class="star_count"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></div>
+								<div class="progress_count">
+									<span style="width: 0%;"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 0								</font></font></div>
+							</li>
+
+						</ul>
+					</div>
+
+				</div>
+<div class="text-center">
+				 <a href="http://doctor.kamleshyadav.net/authentication" class="dd_btn "><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Write a review</font></font></a>					
+				</div>

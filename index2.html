@@ -1,0 +1,346 @@
+index2.html
+<!DOCTYPE html>
+<title>Health Care Portal</title>
+<link href="./css" rel="stylesheet">
+	<link href="./bootstrap.min.css" rel="stylesheet">
+	<link href="./toastr.css" rel="stylesheet">
+	<link href="./bootstrap-material-datetimepicker.css" rel="stylesheet">
+	<link href="./owl.carousel.min.css" rel="stylesheet">
+	<link href="./style.css" rel="stylesheet">
+	<style>
+    /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+       #main {
+  border: 1px solid black;
+  margin: 0 auto;
+  position: relative;
+  list-style: none;
+  background: white;
+  font-weight: 400;
+  font-size: 0;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 0;
+}
+#main li {
+  margin: 0 auto;
+  font-size: 14px;
+  display: inline-block;
+  position: relative;
+  padding: 15px 20px;
+  cursor: pointer;
+  z-index: 5;
+  min-width: 120px;
+}
+
+li {
+  margin: 0;
+}
+
+       .selector {
+  margin: 0 auto;
+  display: block;
+}
+
+
+
+.drop {
+  overflow: hidden;
+  list-style: none;
+  position: absolute;
+  padding: 0;
+  width: 100%;
+  left: 0;
+  top: 48px;
+}
+.drop div {
+  -webkit-transform: translate(0, -100%);
+  -moz-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+  -webkit-transition: all 0.5s 0.1s;
+  -moz-transition: all 0.5s 0.1s;
+  -ms-transition: all 0.5s 0.1s;
+  transition: all 0.5s 0.1s;
+  position: relative;
+}
+.drop li {
+  display: block;
+  padding: 0;
+  width: 100%;
+  background: white !important;
+}
+
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #description {
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+      }
+
+      #infowindow-content .title {
+        font-weight: bold;
+      }
+
+      #infowindow-content {
+        display: none;
+      }
+
+      #map #infowindow-content {
+        display: inline;
+      }
+
+      .pac-card {
+        margin: 10px 10px 0 0;
+        border-radius: 2px 0 0 2px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        outline: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        background-color: #fff;
+        font-family: Roboto;
+      }
+
+      #pac-container {
+        padding-bottom: 12px;
+        margin-right: 12px;
+      }
+
+      .pac-controls {
+        display: inline-block;
+        padding: 5px 11px;
+      }
+
+      .pac-controls label {
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 300;
+      }
+
+      #pac-input {
+        background-color: #fff;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        margin-left: 12px;
+        padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+        width: 400px;
+      }
+
+      #pac-input:focus {
+        border-color: #4d90fe;
+      }
+
+      #title {
+        color: #fff;
+        background-color: #4d90fe;
+        font-size: 25px;
+        font-weight: 500;
+        padding: 6px 12px;
+      }
+      #target {
+        width: 345px;
+      }
+</style>
+</head>
+<body class="dd_site_loaded" style="height: 674px;">
+<div class="dd_loading_wrapper" style="display: none;">
+    <div class="dd_loading_inner">
+        <img src="./loader01.gif" alt="">
+    </div>
+</div>
+<div class="dd_sidebar_close"></div>
+<div class="dd_header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="dd_logo">
+				
+                    <a href="#"><img src="./logo.png" alt=""></a>
+                </div>
+                <div class="dd_nav">
+                    <ul>
+                      <li><a href="./home.html" class=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Home</font></font></a></li>
+                      
+                        <li><a href="./index2.html" class="active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Doctors</font></font></a></li>
+
+                        <li><a href="./hospitals.html" class=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hospitals</font></font></a></li>
+						
+                        <li><a href="#" class=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Appointment</font></font></a></li>
+						
+                        <li><a href="#" class=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Prefer</font></font></a></li>
+						
+												<li><a href="#" class=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">pricing</font></font></a></li>						
+                    </ul>
+                </div>
+               <div class="dd_header_right">
+				 					 <div class="dd_profile_dd">
+                        <label><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Login / Register</font></font></a></label>
+                    </div>
+				  
+                  <div class="dd_nav_toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                  </div>				 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
+
+<div class="dd_main_wrapper">
+<div class="dd_page_title">
+    <h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Find your doctors</font></font></h3>
+    <center><h4 id="loactionSelect">Select Your Location</h4><center>
+     <div class="selector">
+  <ul id="main">
+    <li><p id="getLocation" onclick="locationFunction()">Get Location</p>
+      
+    </li>
+  </ul>
+  </div>
+    <div class="dd_search_box_wrapper">
+        <div class="dd_search_box_inner"> <!-- class for open result - search_result_open -->
+            <input id="searchInput" type="text" placeholder="Search doctor by name, city, specialties" class="form-control dd_input_search">
+            <a class="icon" onclick="searchfunction()">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve"><path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17s-17-7.626-17-17S14.61,6,23.984,6z"></path><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+            </a>
+            <div class="dd_search_result">
+                <ul>
+                   
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>  
+<div class="dd_doctor_list_wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <!-- category start -->
+                <div class="dd_category_toggle">
+                    <svg x="0px" y="0px" viewBox="0 0 60.123 60.123" style="enable-background:new 0 0 60.123 60.123;" xml:space="preserve" width="512px" height="512px"><g><path d="M57.124,51.893H16.92c-1.657,0-3-1.343-3-3s1.343-3,3-3h40.203c1.657,0,3,1.343,3,3S58.781,51.893,57.124,51.893z" fill="#11ccc2"></path><path d="M57.124,33.062H16.92c-1.657,0-3-1.343-3-3s1.343-3,3-3h40.203c1.657,0,3,1.343,3,3 C60.124,31.719,58.781,33.062,57.124,33.062z" fill="#11ccc2"></path><path d="M57.124,14.231H16.92c-1.657,0-3-1.343-3-3s1.343-3,3-3h40.203c1.657,0,3,1.343,3,3S58.781,14.231,57.124,14.231z" fill="#11ccc2"></path><circle cx="4.029" cy="11.463" r="4.029" fill="#11ccc2"></circle><circle cx="4.029" cy="30.062" r="4.029" fill="#11ccc2"></circle><circle cx="4.029" cy="48.661" r="4.029" fill="#11ccc2"></circle></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                </div>
+                <div class="dd_category_wrapper">
+                    <h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Find category</font></font></h3>
+                    <div class="panel-group" id="category_id">
+					  <div class="panel panel-default">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" data-parent="#category_id" href="#category1" aria-expanded="true">
+												<img src="./8896a922d3.svg" alt=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Category 1
+											</font></font></a>
+										</h4>
+									</div>
+								<div id="category1" class="panel-collapse collapse in">
+										<div class="panel-body">
+											<ul class="list-group"><li><a id="cardio" onclick="getCat()" class="list-group-item list_sub_cate"  data-subid="2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" >Cardiologist </font></font></a></li><li><a id="cardio-surg" onclick="getCat()" class="list-group-item list_sub_cate" data-subid="10"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cardiovascular Surgeon </font></font></a></li></ul>
+										</div>
+									</div>
+								</div>
+                <div class="panel panel-default">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" data-parent="#category_id" href="#category2" aria-expanded="true">
+												<img src="./9bf6e06f9e.png" alt=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Category 2
+											</font></font></a>
+										</h4>
+									</div>
+									<div id="category2" class="panel-collapse collapse ">
+										<div class="panel-body">
+											<ul class="list-group"><li><a id="dermatologist" onclick="getCat()"class="list-group-item list_sub_cate" data-subid="9"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dermatologist </font></font></a></li></ul>
+										</div>
+									</div></div>
+                  <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#category_id" href="#category3" aria-expanded="true">
+                        <img src="./9bf6e06f9e.png" alt=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Category 3
+                      </font></font></a>
+                    </h4>
+                  </div>
+                  <div id="category3" class="panel-collapse collapse ">
+                    <div class="panel-body">
+                      <ul class="list-group"><li><a id="Endocrinologists" onclick="getCat()"class="list-group-item list_sub_cate" data-subid="9"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Endocrinologists </font></font></a>
+                        <a id="Neurologists" onclick="getCat()"class="list-group-item list_sub_cate" data-subid="9"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Neurologists </font></font></a></li></ul>
+                    </div>
+                  </div></div>
+
+
+
+                </div>
+              </div>
+                <!-- category end -->
+				
+				<!-- ad wrapper start -->
+				<div class="dd_ad_wrapper">
+				  				</div>
+				<div class="dd_ad_wrapper">
+								</div>
+				<!-- ad wrapper end -->
+				
+            </div>
+            <div class="col-md-8">
+			   <form method="post" id="search_form">
+			   <input type="hidden" name="formKey" id="formKey">
+			   <input type="hidden" name="sub_cat" id="sub_cat">
+			   <input type="hidden" name="order_by" id="order_by">
+			   </form>
+                <!-- filter start -->
+                <div class="dd_filter_wrapper">
+                    <div class="dd_filter dd_dropdown_wrapper dropdown_right">
+                    <span class="icon">
+                        <svg width="15px" height="15px"><path fill-rule="evenodd" fill="rgb(182, 182, 182)" d="M14.936,0.414 C14.816,0.137 14.606,-0.002 14.308,-0.002 L0.691,-0.002 C0.393,-0.002 0.184,0.137 0.064,0.414 C-0.057,0.705 -0.007,0.954 0.213,1.160 L5.457,6.413 L5.457,11.592 C5.457,11.777 5.525,11.936 5.659,12.071 L8.383,14.799 C8.511,14.934 8.670,15.002 8.862,15.002 C8.947,15.002 9.035,14.984 9.127,14.948 C9.404,14.828 9.543,14.618 9.543,14.320 L9.543,6.413 L14.787,1.160 C15.007,0.954 15.057,0.705 14.936,0.414 Z"></path></svg>
+                    </span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> filter by                        </font></font><div class="dd_dropdown">
+                            <div class="dd_dropdown_inner">
+                                <ul>
+                                    <li><a data-order="user_name,asc"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ascendant (az)</font></font></a></li>
+                                    <li><a data-order="user_name,desc"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Descending (za)</font></font></a></li>
+                                    <li><a data-order="user_fees,asc"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+Min price</font></font></a></li>
+									<li><a data-order="user_fees,desc"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Max Price</font></font></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           <div class="dd_access_doctor_data">
+                 
+                 
+                      
+                      
+					</div>
+					
+					 <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDIH6VyEfL8bbFi5F5Srn5r3pFfYFyPpf0",
+    authDomain: "healthportal-415ed.firebaseapp.com",
+    databaseURL: "https://healthportal-415ed.firebaseio.com",
+    projectId: "healthportal-415ed",
+    storageBucket: "healthportal-415ed.appspot.com",
+    messagingSenderId: "334985099455"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="index2.js"></script>
+
+<script src="new.js"></script>
+					
