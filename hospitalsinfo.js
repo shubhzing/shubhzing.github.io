@@ -2,7 +2,6 @@ var latitude;
 var longitude;
 var x = document.getElementById("getLocation");
 function locationFunction(){
-alert("here")
  if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
   } else { 
@@ -59,5 +58,10 @@ htmlText += '</div>';
     //call send
     xhr.send();
 }
-
+$(document).ready(function() {
+  $(".panel-heading").click(function() {
+    var test = $(this).find(".search-keyword").text();
+   alert(test);
+  });
+});
 	
